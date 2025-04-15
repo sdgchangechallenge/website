@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - SDG Change Challenge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* === Copy ALL styles from index.html <style> block here === */
+        body { font-family: 'Poppins', sans-serif; overflow-x: hidden; background-color: #f8fafc; }
+        html { scroll-behavior: smooth; }
+        .nav-link { position: relative; text-decoration: none; transition: color 0.3s ease; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; display: block; margin-top: 4px; right: 0; background: #4f46e5; transition: width 0.3s ease, background-color 0.3s ease; }
+        .nav-link:hover::after { width: 100%; left: 0; background-color: #14b8a6; }
+        .glass-card { background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease; box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.17 ); }
+        .glass-card:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 15px 40px 0 rgba( 31, 38, 135, 0.25 ); }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-on-scroll { opacity: 0; transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .animate-fade-in { transform: translateY(30px); }
+        .animate-slide-in-left { transform: translateX(-50px); }
+        .animate-slide-in-right { transform: translateX(50px); }
+        .animate-scale-up { transform: scale(0.9); }
+        .is-visible { opacity: 1; transform: translate(0, 0) scale(1); }
+        .delay-1 { transition-delay: 0.1s; } .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; } .delay-4 { transition-delay: 0.4s; }
+        .delay-5 { transition-delay: 0.5s; }
+        /* Add any other necessary styles */
+    </style>
+</head>
+<body class="bg-slate-50">
+
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-2xl font-extrabold text-indigo-700 tracking-tight">
+                <a href="index.html">SDG CC</a> </div>
+            <div>
+                <a href="index.html#projects" class="text-slate-700 hover:text-indigo-600 font-semibold nav-link">Back to Home</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-20 md:py-28 min-h-screen">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-center text-indigo-900 mb-16 md:mb-20 animate-on-scroll animate-fade-in is-visible">
+                Our Innovative Projects
+            </h1>
+
+            <div class="space-y-16 md:space-y-20">
+
+                <section id="project-baymax" class="bg-white rounded-xl shadow-xl overflow-hidden lg:flex items-center group animate-on-scroll animate-slide-in-left">
+                    <div class="lg:w-2/5 overflow-hidden h-64 lg:h-96"> <img src="images/baymax-main.jpg" alt="Baymax AI project interface" class="transition-transform duration-500 ease-in-out transform group-hover:scale-105 w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 lg:p-12 lg:w-3/5">
+                        <span class="inline-block bg-teal-100 text-teal-800 text-sm font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">SDG 3: Good Health & Well-being</span>
+                        <h2 class="text-2xl lg:text-3xl font-extrabold text-indigo-900 mb-4">Baymax: AI-Enhanced Patient Intake</h2>
+                        <p class="text-slate-700 mb-5 text-lg leading-relaxed">Developed by innovators at Harold M. Brathwaite S.S., Baymax is an AI-powered proof-of-concept designed to streamline patient intake using conversational AI.</p>
+                        <p class="text-slate-600 mb-6 text-base leading-relaxed">It gently guides patients through providing essential medical history and symptom details, organizing the information efficiently for healthcare professionals, aiming to reduce administrative burden and improve initial assessment accuracy.</p>
+                        <h4 class="font-semibold text-indigo-800 mb-2">Key Aspects:</h4>
+                        <ul class="text-slate-600 space-y-1 text-base list-disc list-inside mb-6">
+                            <li>Natural language processing for intuitive interaction.</li>
+                            <li>Structured data output for easy integration.</li>
+                            <li>Focus on user privacy and ease of use.</li>
+                            <li>Potential to reduce wait times and improve data quality.</li>
+                        </ul>
+                        </div>
+                </section>
+
+                <section id="project-aquasense" class="bg-white rounded-xl shadow-xl overflow-hidden lg:flex items-center group animate-on-scroll animate-slide-in-right">
+                     <div class="lg:w-2/5 overflow-hidden h-64 lg:h-96 order-last lg:order-first"> <img src="images/aquasense-main.jpg" alt="AquaSense water monitoring device in a river setting" class="transition-transform duration-500 ease-in-out transform group-hover:scale-105 w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 lg:p-12 lg:w-3/5 order-first lg:order-last">
+                        <span class="inline-block bg-cyan-100 text-cyan-800 text-sm font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">SDG 6: Clean Water</span>
+                        <h2 class="text-2xl lg:text-3xl font-extrabold text-indigo-900 mb-4">AquaSense Community Monitor</h2>
+                        <p class="text-slate-700 mb-5 text-lg leading-relaxed">A network of affordable, connected sensors designed to provide real-time water quality data for local rivers and lakes.</p>
+                        <p class="text-slate-600 mb-6 text-base leading-relaxed">This project empowers communities with accessible information about their water sources, enabling faster responses to pollution events and promoting environmental awareness through open data.</p>
+                        <h4 class="font-semibold text-indigo-800 mb-2">Key Aspects:</h4>
+                        <ul class="text-slate-600 space-y-1 text-base list-disc list-inside mb-6">
+                            <li>Utilizes low-cost IoT hardware (e.g., ESP32, Raspberry Pi).</li>
+                            <li>Measures key indicators like pH, turbidity, and temperature.</li>
+                            <li>Data accessible via a simple web dashboard or alerts.</li>
+                            <li>Designed for easy deployment and maintenance by community groups.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="project-skillswap" class="bg-white rounded-xl shadow-xl overflow-hidden lg:flex items-center group animate-on-scroll animate-slide-in-left">
+                    <div class="lg:w-2/5 overflow-hidden h-64 lg:h-96">
+                         <img src="images/skillswap-main.jpg" alt="Mobile app interface for SkillSwap Connect" class="transition-transform duration-500 ease-in-out transform group-hover:scale-105 w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 lg:p-12 lg:w-3/5">
+                        <span class="inline-block bg-purple-100 text-purple-800 text-sm font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">SDG 8 & 10: Decent Work & Reduced Inequalities</span>
+                        <h2 class="text-2xl lg:text-3xl font-extrabold text-indigo-900 mb-4">SkillSwap Connect Platform</h2>
+                        <p class="text-slate-700 mb-5 text-lg leading-relaxed">A hyper-local mobile platform designed to connect youth within the Brampton community to exchange skills and services without monetary transactions.</p>
+                        <p class="text-slate-600 mb-6 text-base leading-relaxed">It aims to empower young people by validating their diverse talents, fostering community connections, and providing access to services and learning opportunities through a modern bartering system.</p>
+                        <h4 class="font-semibold text-indigo-800 mb-2">Key Aspects:</h4>
+                        <ul class="text-slate-600 space-y-1 text-base list-disc list-inside mb-6">
+                            <li>User profiles showcasing offered and requested skills.</li>
+                            <li>Secure internal messaging system for arranging swaps.</li>
+                            <li>Reputation system based on completed exchanges.</li>
+                            <li>Focus on accessibility and ease of use for young people.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                 <section id="project-solarsteps" class="bg-white rounded-xl shadow-xl overflow-hidden lg:flex items-center group animate-on-scroll animate-slide-in-right">
+                     <div class="lg:w-2/5 overflow-hidden h-64 lg:h-96 order-last lg:order-first">
+                         <img src="images/solarsteps-main.jpg" alt="Concept image of solar pathway lights" class="transition-transform duration-500 ease-in-out transform group-hover:scale-105 w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 lg:p-12 lg:w-3/5 order-first lg:order-last">
+                        <span class="inline-block bg-pink-100 text-pink-800 text-sm font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">SDG 7: Affordable & Clean Energy</span>
+                        <h2 class="text-2xl lg:text-3xl font-extrabold text-indigo-900 mb-4">SolarSteps Pathway Lighting</h2>
+                        <p class="text-slate-700 mb-5 text-lg leading-relaxed">Developing efficient and durable solar-powered LED lighting solutions specifically designed for community pathways, parks, and school grounds.</p>
+                         <p class="text-slate-600 mb-6 text-base leading-relaxed">This initiative focuses on improving safety and accessibility in public spaces while promoting renewable energy adoption and reducing reliance on grid power for outdoor lighting.</p>
+                        <h4 class="font-semibold text-indigo-800 mb-2">Key Aspects:</h4>
+                        <ul class="text-slate-600 space-y-1 text-base list-disc list-inside mb-6">
+                            <li>High-efficiency solar panels and LED components.</li>
+                            <li>Motion sensor integration for energy conservation.</li>
+                            <li>Weather-resistant and vandal-resistant design.</li>
+                            <li>Analysis of cost-effectiveness compared to traditional lighting.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="project-urbanharvest" class="bg-white rounded-xl shadow-xl overflow-hidden lg:flex items-center group animate-on-scroll animate-slide-in-left">
+                    <div class="lg:w-2/5 overflow-hidden h-64 lg:h-96">
+                         <img src="images/urbanharvest-main.jpg" alt="Small vertical farming unit with lettuce growing" class="transition-transform duration-500 ease-in-out transform group-hover:scale-105 w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 lg:p-12 lg:w-3/5">
+                        <span class="inline-block bg-indigo-100 text-indigo-800 text-sm font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">SDG 2 & 11: Zero Hunger & Sustainable Cities</span>
+                        <h2 class="text-2xl lg:text-3xl font-extrabold text-indigo-900 mb-4">Urban Harvest Hub</h2>
+                        <p class="text-slate-700 mb-5 text-lg leading-relaxed">Designing and prototyping a compact, modular vertical farming system suitable for use in urban homes, schools, or community centers.</p>
+                         <p class="text-slate-600 mb-6 text-base leading-relaxed">This project aims to increase access to fresh, locally grown produce, reduce food miles, and provide an educational tool for teaching sustainable agriculture practices in urban environments.</p>
+                        <h4 class="font-semibold text-indigo-800 mb-2">Key Aspects:</h4>
+                        <ul class="text-slate-600 space-y-1 text-base list-disc list-inside mb-6">
+                            <li>Utilizes hydroponic or aeroponic techniques.</li>
+                            <li>Scalable design to fit different spaces.</li>
+                            <li>Integrated sensors for monitoring nutrients and light (optional).</li>
+                            <li>Focus on ease of use and low maintenance.</li>
+                        </ul>
+                    </div>
+                </section>
+
+
+            </div> <div class="text-center mt-20 md:mt-24">
+                <a href="index.html" class="text-indigo-600 hover:text-teal-700 font-semibold inline-flex items-center group transition duration-300">
+                     <span class="mr-2 transition-transform duration-300 ease-out group-hover:-translate-x-1">←</span>
+                     Back to Main Page
+                </a>
+            </div>
+
+        </div> </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-16">
+        <div class="container mx-auto px-6">
+             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-10">
+                <div class="md:col-span-2 lg:col-span-1">
+                     <h4 class="text-2xl font-extrabold text-white mb-4 tracking-tight">SDG CC</h4>
+                    <p class="text-sm mb-4 leading-relaxed">Igniting youth potential in Brampton & Peel to solve global challenges through innovation and mentorship.</p>
+                    <p class="text-sm">📍 Brampton, ON, Canada</p>
+                    <p class="text-sm mt-1">📧 <a href="mailto:melinda.bandischeffel@peelsb.com" class="hover:text-teal-400 transition duration-300">melinda.bandischeffel@peelsb.com</a></p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold text-white mb-4 uppercase tracking-wider">Explore</h5>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html#about" class="hover:text-teal-400 transition duration-300 hover:translate-x-1 inline-block">About</a></li>
+                        <li><a href="index.html#how-it-works" class="hover:text-teal-400 transition duration-300 hover:translate-x-1 inline-block">Process</a></li>
+                        <li><a href="index.html#impact" class="hover:text-teal-400 transition duration-300 hover:translate-x-1 inline-block">Impact</a></li>
+                        <li><a href="#top" class="hover:text-teal-400 transition duration-300 hover:translate-x-1 inline-block">Projects</a></li>
+                        <li><a href="index.html#join-us" class="hover:text-teal-400 transition duration-300 hover:translate-x-1 inline-block">Get Involved</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h5 class="text-lg font-semibold text-white mb-4 uppercase tracking-wider">Resources</h5>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://sdgs.un.org/goals" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 transition duration-300 hover:translate-x-1 inline-block">The 17 SDGs</a></li>
+                         <li><a href="#" class="hover:text-teal-400 transition duration-300 hover:translate-x-1 inline-block">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold text-white mb-4 uppercase tracking-wider">Connect</h5>
+                     <div class="flex space-x-5">
+                         <a href="#INSTAGRAM_URL_HERE" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-pink-400 transform hover:scale-125 transition duration-300" title="Instagram"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.25-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.85s.012-3.584.07-4.85c.149-3.227 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163zm0 1.441c-3.171 0-3.53.011-4.774.069-2.83.13-3.845 1.152-3.973 3.972-.058 1.244-.069 1.595-.069 4.775s.011 3.53.069 4.774c.128 2.821 1.143 3.845 3.973 3.973 1.244.058 1.603.069 4.774.069s3.53-.011 4.774-.069c2.83-.128 3.845-1.152 3.973-3.973.058-1.244.069-1.595.069-4.774s-.011-3.53-.069-4.774c-.128-2.821-1.143-3.845-3.973-3.972-1.244-.058-1.603-.069-4.774-.069zm0 4.618c-1.923 0-3.472 1.55-3.472 3.472s1.55 3.472 3.472 3.472 3.472-1.55 3.472-3.472-1.55-3.472-3.472-3.472zm0 5.599c-1.174 0-2.127-.953-2.127-2.127s.953-2.127 2.127-2.127 2.127.953 2.127 2.127-.953 2.127-2.127 2.127zm4.958-6.417c-.595 0-1.078.483-1.078 1.078s.483 1.078 1.078 1.078 1.078-.483 1.078-1.078-.483-1.078-1.078-1.078z" clip-rule="evenodd"/></svg></a>
+                          <a href="mailto:melinda.bandischeffel@peelsb.com" class="text-slate-400 hover:text-cyan-400 transform hover:scale-125 transition duration-300" title="Email Us"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.003 5.884L10 13.884l7.997-8M2 18h20V8l-10 7L2 8v10z"></path></svg></a>
+                     </div>
+                </div>
+            </div>
+             <div class="border-t border-slate-700 mt-10 pt-10 text-center text-sm">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> The SDG Change Challenge by Youth Innovators of Peel. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Intersection Observer for Scroll Animations ---
+            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.2 };
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Animate only once
+                    }
+                });
+            };
+            const scrollObserver = new IntersectionObserver(observerCallback, observerOptions);
+            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+            elementsToAnimate.forEach(el => scrollObserver.observe(el));
+
+            // --- Count-Up Animation (Not needed on this page, but safe to include observer logic) ---
+            // Include count-up logic only if you add counters to this page later
+
+            // --- Particle Initialization (Remove if not used on this page) ---
+            // if (typeof tsParticles !== 'undefined') { /* ... */ }
+        });
+    </script>
+
+</body>
+</html>

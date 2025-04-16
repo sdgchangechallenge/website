@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet the Team - SDG Change Challenge</title>
+    <title>Meet the Team - SDG Change Challenge</title> <!-- Changed title slightly -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- No tsParticles needed for this page unless you want background effects -->
+    <!-- No tsParticles needed here -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -18,7 +18,9 @@
         .nav-link { position: relative; text-decoration: none; transition: color 0.3s ease; }
         .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; display: block; margin-top: 4px; right: 0; background: #4f46e5; transition: width 0.3s ease, background-color 0.3s ease; }
         .nav-link:hover::after { width: 100%; left: 0; background-color: #14b8a6; /* Teal accent */ }
-        .nav-link.active::after { width: 100%; left: 0; background-color: #14b8a6; } /* Style for active link */
+        .nav-link.active::after { width: 100%; left: 0; background-color: #14b8a6; font-weight: 700; color: #4f46e5;} /* Style for active link */
+        .nav-link.active { font-weight: 700; color: #4f46e5; } /* Style for active link text */
+
 
         /* Add other necessary base styles if needed */
     </style>
@@ -28,19 +30,28 @@
     <!-- Reusing the Header from the main page -->
     <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-extrabold text-indigo-700 tracking-tight">SDG CC</a> {/* Link back to home */}
+            <a href="index.html" class="text-2xl font-extrabold text-indigo-700 tracking-tight">SDG CC</a> <!-- Link back to home -->
             <div class="hidden md:flex space-x-8 items-center">
                 <a href="index.html#about" class="nav-link text-slate-700 hover:text-indigo-600 font-semibold">About</a>
                 <a href="index.html#how-it-works" class="nav-link text-slate-700 hover:text-indigo-600 font-semibold">Process</a>
                 <a href="index.html#impact" class="nav-link text-slate-700 hover:text-indigo-600 font-semibold">Impact</a>
                 <a href="index.html#projects" class="nav-link text-slate-700 hover:text-indigo-600 font-semibold">Showcase</a>
-                <a href="meet-the-team.html" class="nav-link text-indigo-600 font-semibold active">Meet the Team</a> {/* Active state for current page */}
+                <a href="meet-the-core-team.html" class="nav-link text-slate-700 hover:text-indigo-600 font-semibold active">Meet the Team</a> <!-- FIXED: Link to self, marked active -->
             </div>
-            <div class="md:hidden">
-                <button class="text-slate-700 hover:text-indigo-600 focus:outline-none">
+            <div class="md:hidden relative"> <!-- Added relative positioning -->
+                 <button id="menu-button" aria-expanded="false" aria-controls="mobile-menu" class="text-slate-700 hover:text-indigo-600 focus:outline-none">
+                    <span class="sr-only">Open main menu</span> <!-- Accessibility text -->
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
+                 <!-- Mobile Menu Structure -->
+                 <div id="mobile-menu" class="hidden absolute top-full right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 ring-1 ring-black ring-opacity-5 z-50">
+                    <a href="index.html#about" class="block px-4 py-2 text-sm text-slate-700 hover:bg-indigo-50 hover:text-indigo-600">About</a>
+                    <a href="index.html#how-it-works" class="block px-4 py-2 text-sm text-slate-700 hover:bg-indigo-50 hover:text-indigo-600">Process</a>
+                    <a href="index.html#impact" class="block px-4 py-2 text-sm text-slate-700 hover:bg-indigo-50 hover:text-indigo-600">Impact</a>
+                    <a href="index.html#projects" class="block px-4 py-2 text-sm text-slate-700 hover:bg-indigo-50 hover:text-indigo-600">Showcase</a>
+                    <a href="meet-the-core-team.html" class="block px-4 py-2 text-sm text-slate-700 font-semibold text-indigo-600 bg-indigo-50">Meet the Team</a> <!-- Active state for mobile -->
                  </div>
+            </div>
         </nav>
     </header>
 
@@ -52,6 +63,7 @@
 
                 <!-- Team Picture Placeholder -->
                 <div class="mb-16 md:mb-20 max-w-5xl mx-auto">
+                    <!-- IMPORTANT: Replace this src with your actual team photo -->
                     <img src="https://picsum.photos/seed/sdgteamphoto/1000/500"
                          alt="The SDG Change Challenge Team - Placeholder Image"
                          class="rounded-xl shadow-2xl w-full h-auto object-cover">
@@ -61,9 +73,9 @@
                 <!-- Teacher Supervisors -->
                 <div class="mb-12 md:mb-16">
                     <h2 class="text-3xl font-bold text-indigo-800 mb-6">Teacher Supervisors</h2>
-                    <div class="flex justify-center items-center space-x-8 text-xl text-slate-700">
+                    <div class="flex flex-col sm:flex-row justify-center items-center sm:space-x-8 text-xl text-slate-700 space-y-2 sm:space-y-0">
                         <p class="font-semibold">Ms. Kllapi</p>
-                        <span class="text-slate-400">&</span>
+                        <span class="text-slate-400 hidden sm:inline">&</span>
                         <p class="font-semibold">Ms. Bandi-Scheffel</p>
                     </div>
                 </div>
@@ -71,35 +83,40 @@
                 <!-- Core Team Members -->
                 <div>
                     <h2 class="text-3xl font-bold text-indigo-800 mb-8">Core Team</h2>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-8 max-w-4xl mx-auto">
-                        <!-- Repeat this block for each core team member -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-x-6 gap-y-8 max-w-4xl mx-auto"> <!-- Adjusted lg:grid-cols -->
+                        <!-- Tanuska -->
                         <div class="text-center p-4 rounded-lg transition-colors duration-200">
-                            {/* Optional: Add individual photos later */}
-                            {/* <img src="placeholder.jpg" alt="Tanuska" class="w-24 h-24 rounded-full mx-auto mb-3 shadow-md"> */}
+                            <!-- Optional: <img src="path/to/tanuska.jpg" alt="Tanuska" class="w-24 h-24 rounded-full mx-auto mb-3 shadow-md"> -->
                             <p class="text-lg font-semibold text-indigo-700">Tanuska</p>
                         </div>
+                        <!-- Ali -->
                         <div class="text-center p-4 rounded-lg transition-colors duration-200">
                             <p class="text-lg font-semibold text-indigo-700">Ali</p>
                         </div>
+                        <!-- Chinmay -->
                         <div class="text-center p-4 rounded-lg transition-colors duration-200">
                             <p class="text-lg font-semibold text-indigo-700">Chinmay</p>
                         </div>
+                        <!-- Pranav -->
                         <div class="text-center p-4 rounded-lg transition-colors duration-200">
                             <p class="text-lg font-semibold text-indigo-700">Pranav</p>
                         </div>
+                        <!-- Janiah -->
                         <div class="text-center p-4 rounded-lg transition-colors duration-200">
                             <p class="text-lg font-semibold text-indigo-700">Janiah</p>
                         </div>
+                        <!-- Kierstien -->
                         <div class="text-center p-4 rounded-lg transition-colors duration-200">
                             <p class="text-lg font-semibold text-indigo-700">Kierstien</p>
                         </div>
+                        <!-- Guneet -->
                         <div class="text-center p-4 rounded-lg transition-colors duration-200">
                             <p class="text-lg font-semibold text-indigo-700">Guneet</p>
                         </div>
+                        <!-- Gurnimurat -->
                         <div class="text-center p-4 rounded-lg transition-colors duration-200">
                             <p class="text-lg font-semibold text-indigo-700">Gurnimurat</p>
                         </div>
-                        <!-- End repeatable block -->
                     </div>
                 </div>
 
@@ -112,7 +129,7 @@
        <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-10">
                 <div class="md:col-span-2 lg:col-span-1">
-                     <a href="index.html" class="text-2xl font-extrabold text-white mb-4 tracking-tight inline-block">SDG CC</a> {/* Link back to home */}
+                     <a href="index.html" class="text-2xl font-extrabold text-white mb-4 tracking-tight inline-block">SDG CC</a> <!-- Link back to home -->
                     <p class="text-sm mb-4 leading-relaxed">Igniting youth potential in Brampton & Peel to solve global challenges through innovation and mentorship.</p>
                     <p class="text-sm">📍 Brampton, ON, Canada</p>
                     <p class="text-sm mt-1">📧 <a href="mailto:info@sdgchallenge.example.com" class="hover:text-teal-400 transition duration-300">info@sdgchallenge.example.com</a></p>
@@ -124,7 +141,7 @@
                         <li><a href="index.html#how-it-works" class="hover:text-teal-400 transition duration-300 hover:translate-x-1 inline-block">Process</a></li>
                         <li><a href="index.html#impact" class="hover:text-teal-400 transition duration-300 hover:translate-x-1 inline-block">Impact</a></li>
                         <li><a href="index.html#projects" class="hover:text-teal-400 transition duration-300 hover:translate-x-1 inline-block">Showcase</a></li>
-                        <li><a href="meet-the-team.html" class="hover:text-teal-400 transition duration-300 hover:translate-x-1 inline-block">Meet the Team</a></li>
+                        <li><a href="meet-the-core-team.html" class="hover:text-teal-400 transition duration-300 hover:translate-x-1 inline-block">Meet the Team</a></li> <!-- FIXED: Link to self -->
                     </ul>
                 </div>
                 <div>
@@ -151,14 +168,20 @@
         </div>
     </footer>
 
-    <!-- Optional: Add JS for mobile menu toggle if needed -->
+    <!-- Mobile Menu Toggle Script (Same as index.html) -->
      <script>
-        // Basic mobile menu toggle (if you implement a dropdown)
-        // const menuButton = document.querySelector('.md\\:hidden button');
-        // const mobileMenu = document.querySelector('#mobile-menu'); // Needs a corresponding ID on the mobile menu div
-        // menuButton.addEventListener('click', () => {
-        //    mobileMenu.classList.toggle('hidden');
-        // });
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Toggle --- // FIXED: Implemented toggle
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', () => {
+                    const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+                    menuButton.setAttribute('aria-expanded', !isExpanded);
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
     </script>
 
 </body>
